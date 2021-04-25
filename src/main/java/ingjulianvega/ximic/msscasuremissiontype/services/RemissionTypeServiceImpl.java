@@ -29,7 +29,7 @@ public class RemissionTypeServiceImpl implements RemissionTypeService {
         log.debug("get()...");
         return RemissionTypeList
                 .builder()
-                .bodyPartList(remissionTypeMapper.remissionTypeEntityListToRemissionTypeDtoList(remissionTypeRepository.findAll()))
+                .bodyPartList(remissionTypeMapper.remissionTypeEntityListToRemissionTypeDtoList(remissionTypeRepository.findAllByOrderByName()))
                 .build();
     }
 

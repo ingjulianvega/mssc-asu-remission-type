@@ -11,7 +11,7 @@
 
     <groupId>ingjulianvega.ximic</groupId>
     <artifactId>mssc-asu-remission-type</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>mssc-asu-remission-type</name>
     <description>ASU remission type microservice (tipo de remisión)</description>
 

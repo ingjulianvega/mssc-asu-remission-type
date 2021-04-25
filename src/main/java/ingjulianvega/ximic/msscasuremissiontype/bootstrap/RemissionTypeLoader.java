@@ -26,6 +26,7 @@ public class RemissionTypeLoader implements CommandLineRunner {
                 RemissionTypeEntity.builder().name("Exámenes de sangre").build(),
                 RemissionTypeEntity.builder().name("Ecografía").build(),
                 RemissionTypeEntity.builder().name("Rayos x").build(),
+                RemissionTypeEntity.builder().name("Tomografía").build(),
                 RemissionTypeEntity.builder().name("Otra").build()
         ));
     }

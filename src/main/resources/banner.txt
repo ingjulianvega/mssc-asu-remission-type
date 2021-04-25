@@ -1,0 +1,10 @@
+   _____                                      __________                     .__      ___________                            
+  /  _  \     ______  __ __                   \______   \   ____     _____   |__|     \__    ___/  ___.__. ______     ____   
+ /  /_\  \   /  ___/ |  |  \       ______      |       _/ _/ __ \   /     \  |  |       |    |    <   |  | \____ \  _/ __ \  
+/    |    \  \___ \  |  |  /      /_____/      |    |   \ \  ___/  |  Y Y  \ |  |       |    |     \___  | |  |_> > \  ___/  
+\____|__  / /____  > |____/                    |____|_  /  \___  > |__|_|  / |__|       |____|     / ____| |   __/   \___  > 
+        \/       \/                                   \/       \/        \/                        \/      |__|          \/  
+Application Name: ${application.title}
+Application Version: ${application.version}
+${AnsiColor.RED} :: Spring Boot${spring-boot.formatted-version} :: ${AnsiColor.RED}
+${AnsiColor.DEFAULT}

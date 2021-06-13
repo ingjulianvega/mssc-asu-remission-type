@@ -23,9 +23,9 @@ public class RemissionTypeServiceImpl implements RemissionTypeService {
     private final RemissionTypeRepository remissionTypeRepository;
     private final RemissionTypeMapper remissionTypeMapper;
 
-    @Cacheable(cacheNames = "remissionTypeListCache")
+    @Cacheable(cacheNames = "remissionTypeListCache", condition = "#usingCache == false")
     @Override
-    public RemissionTypeList get() {
+    public RemissionTypeList get(Boolean usingCache) {
         log.debug("get()...");
         return RemissionTypeList
                 .builder()

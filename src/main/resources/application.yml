@@ -24,20 +24,24 @@ spring:
       config: classpath:ehcache.xml
   #Zipkin
   zipkin:
-    enabled: false
+    baseUrl: http://localhost:9411/
 #General configuration
 server:
-  port: 8098
+  port: 8099
   servlet:
     context-path: /asu/v1/remission-type
 #Logging
-#logging:
-#  level:
-#    root: DEBUG
+logging:
+  level:
+    root: DEBUG
 #Exceptions
 remission-type:
   success: The operation was successful.
-  prefix: 'API-DT:'
+  prefix: 'REMISSION-TYPE'
   error:
     general: There was an unexpected error. Please try again.
-
+#Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://netflix:eureka@localhost:8761/eureka

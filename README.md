@@ -12,7 +12,7 @@ https://github.com/ingjulianvega/mssc-asu-bom
 
 ### OpenAPI
 
-http://localhost:8098/asu/v1/remission-type/swagger-ui.html
+http://localhost:8099/asu/v1/remission-type/swagger-ui.html
 
 ### H2
 

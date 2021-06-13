@@ -21,8 +21,8 @@ public class RemissionTypeController implements RemissionTypeI {
     private final RemissionTypeService remissionTypeService;
 
     @Override
-    public ResponseEntity<RemissionTypeList> get() {
-        return new ResponseEntity<>(remissionTypeService.get(), HttpStatus.OK);
+    public ResponseEntity<RemissionTypeList> get(Boolean usingCache) {
+        return new ResponseEntity<>(remissionTypeService.get(usingCache), HttpStatus.OK);
     }
 
     @Override

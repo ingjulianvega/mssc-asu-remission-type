@@ -8,7 +8,7 @@ import ingjulianvega.ximic.msscasuremissiontype.web.model.RemissionTypeList;
 import java.util.UUID;
 
 public interface RemissionTypeService {
-    RemissionTypeList get();
+    RemissionTypeList get(Boolean usingCache);
 
     RemissionTypeDto getById(UUID id);
 

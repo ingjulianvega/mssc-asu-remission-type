@@ -16,7 +16,7 @@ http://localhost:8099/asu/v1/remission-type/swagger-ui.html
 
 ### H2
 
-http://localhost:8098/asu/v1/remission-type/h2-console
+http://localhost:8099/asu/v1/remission-type/h2-console
 
 ```
 jdbc:h2:mem:testdb

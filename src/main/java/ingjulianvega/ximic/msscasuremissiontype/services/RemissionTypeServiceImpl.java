@@ -11,6 +11,7 @@ import ingjulianvega.ximic.msscasuremissiontype.web.model.RemissionTypeList;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -39,7 +40,14 @@ public class RemissionTypeServiceImpl implements RemissionTypeService {
         log.debug("getById()...");
         return remissionTypeMapper.remissionTypeEntityToRemissionTypeDto(
                 remissionTypeRepository.findById(id)
-                        .orElseThrow(() -> new RemissionTypeException(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND, "")));
+                        .orElseThrow(() -> RemissionTypeException
+                                .builder()
+                                .httpStatus(HttpStatus.BAD_REQUEST)
+                                .apiCode(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND_API_CODE)
+                                .error(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND_ERROR)
+                                .message(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND_MESSAGE)
+                                .solution(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND_SOLUTION)
+                                .build()));
     }
 
     @Override
@@ -58,7 +66,14 @@ public class RemissionTypeServiceImpl implements RemissionTypeService {
     public void updateById(UUID id, RemissionType remissionType) {
         log.debug("updateById...");
         RemissionTypeEntity evidenceEntity = remissionTypeRepository.findById(id)
-                .orElseThrow(() -> new RemissionTypeException(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND, ""));
+                .orElseThrow(() -> RemissionTypeException
+                        .builder()
+                        .httpStatus(HttpStatus.BAD_REQUEST)
+                        .apiCode(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND_API_CODE)
+                        .error(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND_ERROR)
+                        .message(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND_MESSAGE)
+                        .solution(ErrorCodeMessages.REMISSION_TYPE_NOT_FOUND_SOLUTION)
+                        .build());
 
         evidenceEntity.setName(remissionType.getName());
 

@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 @Data
@@ -15,6 +16,7 @@ public class RemissionType implements Serializable {
 
     static final long serialVersionUID = -235993884904618181L;
 
+    @NotBlank
     private String name;
 
 }
